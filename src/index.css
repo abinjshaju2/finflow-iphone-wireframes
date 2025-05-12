@@ -86,33 +86,8 @@
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
-
-/* iPhone 15 specific styling */
-.iphone-screen {
-  width: 393px;
-  height: 852px;
-  overflow: hidden;
-  position: relative;
-  margin: 0 auto;
-  border-radius: 50px; /* iPhone 15 rounded corners */
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-}
-
 .app-content {
   height: 100%;
   padding: 20px 0 80px; /* Adjusted padding to remove space for status bar */
   overflow-y: auto;
-}
-
-.home-indicator {
-  width: 134px;
-  height: 5px;
-  background-color: #000;
-  border-radius: 100px;
-  position: absolute;
-  bottom: 8px;
-  left: 50%;
-  transform: translateX(-50%);
-  opacity: 0.3;
-  z-index: 10;
 }

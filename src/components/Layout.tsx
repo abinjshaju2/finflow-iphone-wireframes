@@ -12,7 +12,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="iphone-screen bg-background">
+    <div className="bg-background">
       {/* Main Content */}
       <div className="app-content">
         {children}
@@ -57,9 +57,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
           </button>
         </div>
       </div>
-      
-      {/* Home Indicator */}
-      <div className="home-indicator"></div>
+      {/* Bottom Navigation End */}
     </div>
   );
 };
