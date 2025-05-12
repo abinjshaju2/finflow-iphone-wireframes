@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { Calendar, PieChart, Plus, User } from 'lucide-react';
+import { Calendar, PieChart, Plus, User, Download } from 'lucide-react';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
@@ -46,7 +46,13 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
             </button>
           </div>
           
-          <div className="w-5"></div> {/* Empty space for balance */}
+          <button 
+            onClick={() => navigate('/import-export')}
+            className={`flex flex-col items-center ${isActive('/import-export') ? 'text-expense-primary' : 'text-gray-500'}`}
+          >
+            <Download className="h-5 w-5" />
+            <span className="text-xs mt-1">Import/Export</span>
+          </button>
           
           <button 
             onClick={() => navigate('/settings')}

@@ -8,6 +8,7 @@ import Dashboard from "./pages/Dashboard";
 import AddExpense from "./pages/AddExpense";
 import Analytics from "./pages/Analytics";
 import Settings from "./pages/Settings";
+import ImportExport from "./pages/ImportExport";
 import NotFound from "./pages/NotFound";
 import Layout from "./components/Layout";
 
@@ -24,6 +25,7 @@ const App = () => (
           <Route path="/add-expense" element={<Layout><AddExpense /></Layout>} />
           <Route path="/analytics" element={<Layout><Analytics /></Layout>} />
           <Route path="/settings" element={<Layout><Settings /></Layout>} />
+          <Route path="/import-export" element={<Layout><ImportExport /></Layout>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
