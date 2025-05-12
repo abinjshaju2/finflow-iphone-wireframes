@@ -12,54 +12,54 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   };
 
   return (
-    <div className="bg-background">
+    <div className="bg-gray-50 min-h-screen flex flex-col">
       {/* Main Content */}
-      <div className="app-content">
+      <div className="app-content flex-1 overflow-auto">
         {children}
       </div>
       
-      {/* Bottom Navigation */}
-      <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-200 pb-6 pt-2 px-4">
-        <div className="flex justify-around items-center">
+      {/* Bottom Navigation - iOS Style */}
+      <div className="fixed bottom-0 left-0 w-full bg-white/80 backdrop-blur-md border-t border-gray-200 pb-5 pt-2 px-6">
+        <div className="flex justify-around items-center max-w-md mx-auto">
           <button 
             onClick={() => navigate('/')}
-            className={`flex flex-col items-center ${isActive('/') ? 'text-expense-primary' : 'text-gray-500'}`}
+            className={`flex flex-col items-center ${isActive('/') ? 'text-expense-primary' : 'text-gray-400'}`}
           >
-            <Calendar className="h-5 w-5" />
-            <span className="text-xs mt-1">Dashboard</span>
+            <Calendar className="h-6 w-6" strokeWidth={1.5} />
+            <span className="text-xs mt-1 font-medium">Home</span>
           </button>
           
           <button 
             onClick={() => navigate('/analytics')}
-            className={`flex flex-col items-center ${isActive('/analytics') ? 'text-expense-primary' : 'text-gray-500'}`}
+            className={`flex flex-col items-center ${isActive('/analytics') ? 'text-expense-primary' : 'text-gray-400'}`}
           >
-            <PieChart className="h-5 w-5" />
-            <span className="text-xs mt-1">Analytics</span>
+            <PieChart className="h-6 w-6" strokeWidth={1.5} />
+            <span className="text-xs mt-1 font-medium">Analytics</span>
           </button>
           
-          <div className="relative -mt-5">
+          <div className="relative -mt-8">
             <button 
               onClick={() => navigate('/add-expense')}
-              className="bg-expense-primary text-white p-3 rounded-full shadow-lg"
+              className="bg-expense-primary shadow-lg shadow-expense-primary/30 text-white p-4 rounded-full"
             >
-              <Plus className="h-6 w-6" />
+              <Plus className="h-6 w-6" strokeWidth={2} />
             </button>
           </div>
           
           <button 
             onClick={() => navigate('/import-export')}
-            className={`flex flex-col items-center ${isActive('/import-export') ? 'text-expense-primary' : 'text-gray-500'}`}
+            className={`flex flex-col items-center ${isActive('/import-export') ? 'text-expense-primary' : 'text-gray-400'}`}
           >
-            <Download className="h-5 w-5" />
-            <span className="text-xs mt-1">Import/Export</span>
+            <Download className="h-6 w-6" strokeWidth={1.5} />
+            <span className="text-xs mt-1 font-medium">Export</span>
           </button>
           
           <button 
             onClick={() => navigate('/settings')}
-            className={`flex flex-col items-center ${isActive('/settings') ? 'text-expense-primary' : 'text-gray-500'}`}
+            className={`flex flex-col items-center ${isActive('/settings') ? 'text-expense-primary' : 'text-gray-400'}`}
           >
-            <User className="h-5 w-5" />
-            <span className="text-xs mt-1">Settings</span>
+            <User className="h-6 w-6" strokeWidth={1.5} />
+            <span className="text-xs mt-1 font-medium">Settings</span>
           </button>
         </div>
       </div>
