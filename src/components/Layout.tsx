@@ -6,11 +6,6 @@ import { Calendar, PieChart, Plus, User } from 'lucide-react';
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const location = useLocation();
   const navigate = useNavigate();
-  const currentTime = new Date().toLocaleTimeString('en-US', { 
-    hour: '2-digit', 
-    minute: '2-digit',
-    hour12: true 
-  });
 
   const isActive = (path: string) => {
     return location.pathname === path;
@@ -18,14 +13,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 
   return (
     <div className="iphone-screen bg-background">
-      {/* Status Bar */}
-      <div className="notch-area">
-        <div className="status-bar text-xs font-semibold">
-          <span>{currentTime}</span>
-          <span>100%</span>
-        </div>
-      </div>
-      
       {/* Main Content */}
       <div className="app-content">
         {children}
