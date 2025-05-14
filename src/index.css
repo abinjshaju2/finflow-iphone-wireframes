@@ -43,6 +43,14 @@
     --sidebar-accent-foreground: 284 10% 20%;
     --sidebar-border: 267 20% 88%;
     --sidebar-ring: 267 54% 47%;
+    
+    /* Material You expense category colors */
+    --expense-food: 29 100% 47%;
+    --expense-transport: 210 100% 53%;
+    --expense-bills: 285 52% 57%;
+    --expense-shopping: 153 100% 27%;
+    --expense-entertainment: 44 90% 51%;
+    --expense-primary: 267 54% 47%;
   }
 
   .dark {

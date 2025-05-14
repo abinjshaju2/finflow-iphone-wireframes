@@ -64,12 +64,12 @@ export default {
 					ring: 'hsl(var(--sidebar-ring))'
 				},
 				expense: {
-					primary: "#6750A4",  // Material You primary purple
-					food: "#EB6A02",    // Material orange
-					transport: "#0F87FF", // Material blue
-					bills: "#B45BC9",    // Material purple
-					shopping: "#00875A", // Material green
-					entertainment: "#F3B711", // Material yellow
+					primary: "hsl(var(--expense-primary))",
+					food: "hsl(var(--expense-food))",
+					transport: "hsl(var(--expense-transport))",
+					bills: "hsl(var(--expense-bills))",
+					shopping: "hsl(var(--expense-shopping))",
+					entertainment: "hsl(var(--expense-entertainment))",
 				}
 			},
 			borderRadius: {
