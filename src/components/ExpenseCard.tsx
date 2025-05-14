@@ -23,12 +23,12 @@ const ExpenseCard: React.FC<ExpenseCardProps> = ({ expense }) => {
   };
   
   return (
-    <div className="flex items-center justify-between p-3 border-b border-gray-100">
-      <div className="flex items-center gap-3">
+    <div className="flex items-center justify-between p-4 border-b border-border/40 hover:bg-secondary/30 transition-colors">
+      <div className="flex items-center gap-4">
         <CategoryIcon category={category} withBackground size={18} />
         <div>
           <h4 className="font-medium">{getCategoryLabel(category)}</h4>
-          <p className="text-xs text-gray-500">
+          <p className="text-xs text-muted-foreground">
             {description || format(date, 'MMM d')}
           </p>
         </div>

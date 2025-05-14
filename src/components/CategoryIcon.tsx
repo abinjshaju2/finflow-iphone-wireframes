@@ -20,7 +20,7 @@ const getCategoryColor = (category: CategoryType): string => {
     case 'bills': return 'text-expense-bills';
     case 'shopping': return 'text-expense-shopping';
     case 'entertainment': return 'text-expense-entertainment';
-    default: return 'text-gray-500';
+    default: return 'text-muted-foreground';
   }
 };
 
@@ -31,7 +31,7 @@ const getCategoryBgColor = (category: CategoryType): string => {
     case 'bills': return 'bg-expense-bills/10';
     case 'shopping': return 'bg-expense-shopping/10';
     case 'entertainment': return 'bg-expense-entertainment/10';
-    default: return 'bg-gray-100';
+    default: return 'bg-secondary';
   }
 };
 
